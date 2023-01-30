@@ -5,7 +5,9 @@
 This github project is solely for issue tracking/discussion/documentation
 purposes. All Android/riscv64 work is being done directly in
 [AOSP](https://source.android.com/), and patches should be sent
-there as usual for AOSP rather than as pull requests.
+there using the
+[usual AOSP process](https://source.android.com/docs/setup/contribute#contribute-to-the-code)
+and *not* as pull requests here.
 
 The [sig-android@lists.riscv.org](https://lists.riscv.org/g/sig-android)
 mailing list is also likely of interest.
