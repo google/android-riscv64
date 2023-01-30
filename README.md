@@ -5,8 +5,8 @@
 This github project is solely for issue tracking/discussion/documentation
 purposes. All Android/riscv64 work is being done directly in
 [AOSP](https://source.android.com/), and patches should be sent
-there using the
-[usual AOSP process](https://source.android.com/docs/setup/contribute#contribute-to-the-code)
+there using the usual
+[AOSP contribution process](https://source.android.com/docs/setup/contribute#contribute-to-the-code)
 and *not* as pull requests here.
 
 The [sig-android@lists.riscv.org](https://lists.riscv.org/g/sig-android)
@@ -14,6 +14,9 @@ mailing list is also likely of interest.
 
 ## Can I try it?
 
+Download the source using the usual
+[AOSP download process](https://source.android.com/docs/setup/download/downloading)
+and then:
 ```
 $ cd aosp
 $ source build/envsetup.sh
@@ -35,10 +38,17 @@ OUT_DIR=out
 ============================================
 $ make -j
 ```
+If you want to check whether a particular directory builds, `cd` into
+that directory and use `mm -j`.
 
-We're currently (2023Q1) still working on cuttlefish and ART, so
-for now all you'll have is a shell, command-line tools, and relevant
-libraries that you can manually run in qemu.
+We're currently (2023Q1) still working on
+[cuttlefish virtual devices](https://source.android.com/docs/setup/create/cuttlefish)
+and
+[ART](https://source.android.com/docs/core/runtime),
+so for now all you'll have is a
+[shell and command-line tools](https://android.googlesource.com/platform/system/core/+/master/shell_and_utilities/README.md),
+and all the libraries they rely on. For now you'll have to manually
+run them in qemu.
 
 ## How do I contribute?
 
