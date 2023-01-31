@@ -7,12 +7,25 @@ purposes. All Android/riscv64 work is being done directly in
 [AOSP](https://source.android.com/), and patches should be sent
 there using the usual
 [AOSP contribution process](https://source.android.com/docs/setup/contribute#contribute-to-the-code)
-and *not* as pull requests here. You can see the current status of the
-riscv64 build in the `aosp_riscv64` column of
-[ci.android.com](https://ci.android.com/builds/branches/aosp-master/grid?).
+and *not* as pull requests here.
 
 The [sig-android@lists.riscv.org](https://lists.riscv.org/g/sig-android)
 mailing list is also likely of interest.
+
+## Status
+
+We're currently (2023Q1) still working on
+[cuttlefish virtual devices](https://source.android.com/docs/setup/create/cuttlefish)
+and
+[ART](https://source.android.com/docs/core/runtime),
+so for now all you'll have is a
+[shell and command-line tools](https://android.googlesource.com/platform/system/core/+/master/shell_and_utilities/README.md),
+and all the libraries they rely on. For now you'll have to manually
+run them in qemu.
+
+You can see the current status of the
+riscv64 build in the `aosp_riscv64` column of
+[ci.android.com](https://ci.android.com/builds/branches/aosp-master/grid?).
 
 ## Can I try it?
 
@@ -42,15 +55,6 @@ $ make -j
 ```
 If you want to check whether a particular directory builds, `cd` into
 that directory and use `mm -j`.
-
-We're currently (2023Q1) still working on
-[cuttlefish virtual devices](https://source.android.com/docs/setup/create/cuttlefish)
-and
-[ART](https://source.android.com/docs/core/runtime),
-so for now all you'll have is a
-[shell and command-line tools](https://android.googlesource.com/platform/system/core/+/master/shell_and_utilities/README.md),
-and all the libraries they rely on. For now you'll have to manually
-run them in qemu.
 
 ## How do I contribute?
 
