@@ -7,7 +7,9 @@ purposes. All Android/riscv64 work is being done directly in
 [AOSP](https://source.android.com/), and patches should be sent
 there using the usual
 [AOSP contribution process](https://source.android.com/docs/setup/contribute#contribute-to-the-code)
-and *not* as pull requests here.
+and *not* as pull requests here. You can see the current status of the
+riscv64 build in the `aosp_riscv64` column of
+[ci.android.com](https://ci.android.com/builds/branches/aosp-master/grid?).
 
 The [sig-android@lists.riscv.org](https://lists.riscv.org/g/sig-android)
 mailing list is also likely of interest.
