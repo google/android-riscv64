@@ -21,7 +21,7 @@ and
 so for now all you'll have is a
 [shell and command-line tools](https://android.googlesource.com/platform/system/core/+/master/shell_and_utilities/README.md),
 and all the libraries they rely on. Until we have cuttlefish working you'll have to manually
-run them in qemu.
+run them in qemu or on your own hardware.
 
 You can see the current status of the
 riscv64 build in the `aosp_riscv64` column of
