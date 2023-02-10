@@ -9,12 +9,10 @@ there using the usual
 [AOSP contribution process](https://source.android.com/docs/setup/contribute#contribute-to-the-code)
 and *not* as pull requests here.
 
-
-
 You might also want to subscribe to the `sig-android@lists.riscv.org`
 mailing list (subscribe my sending a mail to
 [sig-android+subscribe@lists.riscv.org](mailto:sig-android+subscribe@lists.riscv.org)),
-or browse the [mailing list archive](https://lists.riscv.org/g/sig-android/topics).
+or browse their [mailing list archive](https://lists.riscv.org/g/sig-android/topics).
 
 ## Status
 
