@@ -11,8 +11,8 @@ Patches should be sent to AOSP using the usual
 and *not* as pull requests here.
 
 You might also want to subscribe to the
-[sig-android@lists.riscv.org](https://lists.riscv.org/g/sig-android)
-mailing list. (You need to send mail to
+[sig-android mailing list](https://lists.riscv.org/g/sig-android).
+(You need to send mail to
 [sig-android+subscribe@lists.riscv.org](mailto:sig-android+subscribe@lists.riscv.org))
 and then click "Join" on the mailing list web site.)
 
