@@ -14,7 +14,7 @@ You might also want to subscribe to the
 [sig-android@lists.riscv.org](https://lists.riscv.org/g/sig-android)
 mailing list. (You need to send mail to
 [sig-android+subscribe@lists.riscv.org](mailto:sig-android+subscribe@lists.riscv.org))
-and then click "Join" on the mailing list web site).
+and then click "Join" on the mailing list web site.)
 
 ## Status
 
