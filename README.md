@@ -3,9 +3,10 @@
 ## What is this?
 
 This github project is solely for issue tracking/discussion/documentation
-purposes. All Android/riscv64 work is being done directly in
-[AOSP](https://source.android.com/), and patches should be sent
-there using the usual
+purposes.
+
+All Android/riscv64 work is being done directly in [AOSP](https://source.android.com/).
+Patches should be sent to AOSP using the usual
 [AOSP contribution process](https://source.android.com/docs/setup/contribute#contribute-to-the-code)
 and *not* as pull requests here.
 
