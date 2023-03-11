@@ -39,12 +39,12 @@ and then:
 ```
 $ cd aosp
 $ source build/envsetup.sh
-$ lunch aosp_riscv64-userdebug
+$ lunch aosp_cf_riscv64_slim-userdebug
 
 ============================================
 PLATFORM_VERSION_CODENAME=UpsideDownCake
 PLATFORM_VERSION=UpsideDownCake
-TARGET_PRODUCT=aosp_riscv64
+TARGET_PRODUCT=aosp_cf_riscv64_slim
 TARGET_BUILD_VARIANT=userdebug
 TARGET_ARCH=riscv64
 TARGET_ARCH_VARIANT=riscv64
@@ -59,6 +59,14 @@ $ make -j
 ```
 If you want to check whether a particular directory builds, `cd` into
 that directory and use `mm -j`.
+
+To launch cuttlefish, follow the general
+[AOSP cuttlefish setup](https://source.android.com/docs/setup/create/cuttlefish-use)
+instructions
+```
+$ launch_cvd -console=true
+```
+You can then use `adb shell` to connect to your riscv64 cuttlefish!
 
 ## How do I contribute?
 
