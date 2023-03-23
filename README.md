@@ -64,13 +64,16 @@ To launch cuttlefish, follow the general
 [AOSP cuttlefish setup](https://source.android.com/docs/setup/create/cuttlefish-use)
 instructions.
 
-Note: besides upon environment setup, you may have to install qemu-system-riscv64
-and try the latest vesion (such as v7.2.0) because cuttlefish requires this.
-
 ```
 $ launch_cvd -console=true
 ```
 You can then use `adb shell` to connect to your riscv64 cuttlefish!
+
+(Note that in addition to the setup mentioned there, if your host Linux
+distro doesn't already have it, you will have to `apt install qemu-system-riscv64`.
+If your host Linux distro's qemu version is too old -- we recommend 7.2.0 --
+you may need to build your own. In that case, you'll need the `-qemu_binary_dir=`
+option when calling `launch_cvd` to point it at the correct copy of qemu.)
 
 ## How do I contribute?
 
