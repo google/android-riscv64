@@ -62,7 +62,11 @@ that directory and use `mm -j`.
 
 To launch cuttlefish, follow the general
 [AOSP cuttlefish setup](https://source.android.com/docs/setup/create/cuttlefish-use)
-instructions
+instructions.
+
+Note: besides upon environment setup, you may have to install qemu-system-riscv64
+and try the latest vesion (such as v7.2.0) because cuttlefish requires this.
+
 ```
 $ launch_cvd -console=true
 ```
