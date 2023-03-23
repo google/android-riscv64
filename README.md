@@ -69,7 +69,7 @@ $ launch_cvd -console=true
 ```
 You can then use `adb shell` to connect to your riscv64 cuttlefish!
 
-(Note that in addition to the setup mentioned there, if your host Linux
+(Note that in addition to the general setup mentioned above, if your host Linux
 distro doesn't already have it, you will have to `apt install qemu-system-riscv64`.
 If your host Linux distro's qemu version is too old -- we recommend 7.2.0 --
 you may need to build your own. In that case, you'll need the `-qemu_binary_dir=`
