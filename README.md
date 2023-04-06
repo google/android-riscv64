@@ -39,12 +39,12 @@ and then:
 ```
 $ cd aosp
 $ source build/envsetup.sh
-$ lunch aosp_cf_riscv64_slim-userdebug
+$ lunch aosp_cf_riscv64_phone-userdebug
 
 ============================================
 PLATFORM_VERSION_CODENAME=UpsideDownCake
 PLATFORM_VERSION=UpsideDownCake
-TARGET_PRODUCT=aosp_cf_riscv64_slim
+TARGET_PRODUCT=aosp_cf_riscv64_phone
 TARGET_BUILD_VARIANT=userdebug
 TARGET_ARCH=riscv64
 TARGET_ARCH_VARIANT=riscv64
