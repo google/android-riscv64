@@ -60,20 +60,36 @@ $ make -j
 If you want to check whether a particular directory builds, `cd` into
 that directory and use `mm -j`.
 
+### Cuttlefish (emulator) setup
+
 To launch cuttlefish, follow the general
 [AOSP cuttlefish setup](https://source.android.com/docs/setup/create/cuttlefish-use)
 instructions.
-
-```
-$ launch_cvd -console=true
-```
-You can then use `adb shell` to connect to your riscv64 cuttlefish!
 
 (Note that in addition to the general setup mentioned above, if your host Linux
 distro doesn't already have it, you will have to `apt install qemu-system-riscv64`.
 If your host Linux distro's qemu version is too old -- we recommend 7.2.0 --
 you may need to build your own. In that case, you'll need the `-qemu_binary_dir=`
 option when calling `launch_cvd` to point it at the correct copy of qemu.)
+
+### Getting to a shell
+
+After building, run this following command from the same shell:
+```
+$ launch_cvd -cpus=4 --memory_mb=8192
+```
+After about 10s you should be able to use `adb shell` to connect to your riscv64 cuttlefish!
+
+### Getting to the home screen
+
+After building, run this following command from the same shell:
+```
+$ launch_cvd -cpus=8 --memory_mb=8192 --gpu_mode=drm_virgl
+```
+You can then use `vncviewer localhost:6444` to connect to your riscv64 cuttlefish!
+
+(Note that even on a fast Xeon workstation it takes several minutes to get to
+the boot animation and tens of minutes to get to the home screen!)
 
 ## How do I contribute?
 
