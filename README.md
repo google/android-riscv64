@@ -72,7 +72,7 @@ If your host Linux distro's qemu version is too old -- we recommend 7.2.0 --
 you may need to build your own. In that case, you'll need the `-qemu_binary_dir=`
 option when calling `launch_cvd` to point it at the correct copy of qemu.)
 
-### Getting to a shell
+### Getting to a shell (faster, but no graphics)
 
 After building, run this following command from the same shell:
 ```
@@ -80,7 +80,7 @@ $ launch_cvd -cpus=4 --memory_mb=8192
 ```
 After about 10s you should be able to use `adb shell` to connect to your riscv64 cuttlefish!
 
-### Getting to the home screen
+### Getting to the home screen (slower, but with graphics)
 
 After building, run this following command from the same shell:
 ```
