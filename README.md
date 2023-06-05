@@ -89,7 +89,7 @@ $ launch_cvd -cpus=8 --memory_mb=8192 --gpu_mode=drm_virgl
 You can then use `vncviewer localhost:6444` to connect to your riscv64 cuttlefish!
 
 (Note that even on a fast Xeon workstation it takes several minutes to get to
-the boot animation and tens of minutes to get to the home screen!)
+the boot animation and ten minutes to get to the home screen!)
 
 ## How do I contribute?
 
