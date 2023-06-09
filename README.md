@@ -60,6 +60,8 @@ $ make -j
 If you want to check whether a particular directory builds, `cd` into
 that directory and use `mm -j`.
 
+The value of jobs is recommended, such as `make -j8`, otherwise oom-killer may come out.
+
 ### Cuttlefish (emulator) setup
 
 To launch cuttlefish, follow the general
