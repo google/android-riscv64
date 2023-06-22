@@ -60,6 +60,9 @@ $ make -j
 If you want to check whether a particular directory builds, `cd` into
 that directory and use `mm -j`.
 
+(For more tips on building in general, see
+[Building Android](https://source.android.com/docs/setup/build/building).)
+
 ### Cuttlefish (emulator) setup
 
 To launch cuttlefish, follow the general
