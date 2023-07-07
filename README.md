@@ -29,7 +29,7 @@ run them in qemu or on your own hardware.
 
 You can see the current status of the
 riscv64 build in the `aosp_riscv64` column of
-[ci.android.com](https://ci.android.com/builds/branches/aosp-master/grid?).
+[ci.android.com](https://ci.android.com/builds/branches/aosp-master/grid?). (Note that this seems to be out of date as part of the 2023-07-06 transition from "master" to "main" --- "master" seems to be no longer building, but the "main" build doesn't exist yet.)
 
 ## Can I try it?
 
