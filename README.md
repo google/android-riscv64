@@ -23,7 +23,7 @@ We're currently (2023Q1) still working on
 and
 [ART](https://source.android.com/docs/core/runtime),
 so for now all you'll have is a
-[shell and command-line tools](https://android.googlesource.com/platform/system/core/+/master/shell_and_utilities/README.md),
+[shell and command-line tools](https://android.googlesource.com/platform/system/core/+/main/shell_and_utilities/README.md),
 and all the libraries they rely on. Until we have cuttlefish working you'll have to manually
 run them in qemu or on your own hardware.
 
