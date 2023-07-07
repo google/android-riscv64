@@ -18,14 +18,15 @@ and then click "Join" on the mailing list web site.)
 
 ## Status
 
-We're currently (2023Q1) still working on
+We're currently (2023Q3) still working on
 [cuttlefish virtual devices](https://source.android.com/docs/setup/create/cuttlefish)
 and
 [ART](https://source.android.com/docs/core/runtime),
-so for now all you'll have is a
+although the
 [shell and command-line tools](https://android.googlesource.com/platform/system/core/+/main/shell_and_utilities/README.md),
-and all the libraries they rely on. Until we have cuttlefish working you'll have to manually
-run them in qemu or on your own hardware.
+and all the libraries they rely on have been working great for a while.
+ART works, but is currently interpreter-only, so quite slow.
+cuttlefish works, but you'll need a very recent qemu (see the cuttlefish setup section below for more details).
 
 You can see the current status of the
 riscv64 build in the `aosp_riscv64` column of
