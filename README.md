@@ -23,8 +23,8 @@ We're currently (2023Q3) still working on
 and
 [ART](https://source.android.com/docs/core/runtime),
 although the
-[shell and command-line tools](https://android.googlesource.com/platform/system/core/+/main/shell_and_utilities/README.md),
-and all the libraries they rely on have been working great for a while.
+[shell and command-line tools](https://android.googlesource.com/platform/system/core/+/main/shell_and_utilities/README.md)
+(and all the libraries they rely on) have been working great for a while.
 ART works, but is currently interpreter-only, so quite slow.
 cuttlefish works, but you'll need a very recent qemu (see the cuttlefish setup section below for more details).
 
