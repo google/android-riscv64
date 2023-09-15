@@ -26,7 +26,7 @@ although the
 [shell and command-line tools](https://android.googlesource.com/platform/system/core/+/main/shell_and_utilities/README.md)
 (and all the libraries they rely on) have been working great for a while.
 ART works, but is currently interpreter-only, so quite slow.
-cuttlefish works, but you'll need a very recent qemu (see the cuttlefish setup section below for more details).
+cuttlefish works, but you'll need qemu 8 (see the cuttlefish setup section below for more details).
 
 You can see the current status of the
 riscv64 build in the `aosp_riscv64` column of
@@ -72,7 +72,8 @@ instructions.
 
 (Note that in addition to the general setup mentioned above, if your host Linux
 distro doesn't already have it, you will have to `apt install qemu-system-riscv64`.
-If your host Linux distro's qemu version is too old -- we recommend 7.2.0 --
+If your host Linux distro's qemu version is too old -- we recommend 8.1.0, which
+is currently available in Debian testing --
 you may need to build your own. In that case, you'll need the `-qemu_binary_dir=`
 option when calling `launch_cvd` to point it at the correct copy of qemu.)
 
