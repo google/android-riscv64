@@ -40,7 +40,7 @@ and then:
 ```
 $ cd aosp
 $ source build/envsetup.sh
-$ lunch aosp_cf_riscv64_phone-userdebug
+$ lunch aosp_cf_riscv64_phone-trunk_staging-userdebug
 
 ============================================
 PLATFORM_VERSION_CODENAME=UpsideDownCake
