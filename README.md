@@ -29,8 +29,9 @@ ART works, but is currently interpreter-only, so quite slow.
 cuttlefish works, but you'll need qemu 8 (see the cuttlefish setup section below for more details).
 
 You can see the current status of the
-riscv64 build in the `aosp_riscv64` column of
-[ci.android.com](https://ci.android.com/builds/branches/aosp-master/grid?).
+riscv64 build in CI in the `aosp_cf_riscv64_phone` column (between arm64 and x86-64) of
+[ci.android.com](https://ci.android.com/builds/branches/aosp-main/grid?), but we're not
+currently (2023Q4) running the _tests_ in CI.
 
 ## Can I try it?
 
