@@ -18,7 +18,7 @@ and then click "Join" on the mailing list web site.)
 
 ## Status
 
-We're currently (2023Q3) still working on
+We're currently (2023Q4) still working on
 [cuttlefish virtual devices](https://source.android.com/docs/setup/create/cuttlefish)
 and
 [ART](https://source.android.com/docs/core/runtime),
