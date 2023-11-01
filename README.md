@@ -2,6 +2,9 @@
 
 ## What is this?
 
+If you don't know what Android is, what risc-v is, or what they have to do with one another,
+start by reading [Android and RISC-V: What you need to know to be ready](https://opensource.googleblog.com/2023/10/android-and-risc-v-what-you-need-to-know.html).
+
 This github project is solely for issue tracking/discussion/documentation
 purposes.
 
