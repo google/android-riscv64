@@ -74,18 +74,15 @@ To launch cuttlefish, follow the general
 [AOSP cuttlefish setup](https://source.android.com/docs/setup/create/cuttlefish-use)
 instructions.
 
-(Note that in addition to the general setup mentioned above, if your host Linux
-distro doesn't already have it, you will have to `apt install qemu-system-riscv64`.
-If your host Linux distro's qemu version is too old -- we recommend 8.1.0, which
-is currently available in Debian testing --
-you may need to build your own. In that case, you'll need the `-qemu_binary_dir=`
-option when calling `launch_cvd` to point it at the correct copy of qemu.)
+Note that you need at least qemu 8.1, so you'll probably want to use the
+prebuilt qemu binaries in AOSP (as shown in the example commands below).
 
 ### Getting to a shell (faster, but no graphics)
 
 After building, run this following command from the same shell:
 ```
-$ launch_cvd -cpus=4 --memory_mb=8192
+$ launch_cvd -cpus=4 --memory_mb=8192 \
+   --vm_manager=qemu_cli --qemu_binary_dir=$ANDROID_BUILD_TOP/device/google/cuttlefish_vmm/qemu/x86_64-linux-gnu/bin
 ```
 After about 10s you should be able to use `adb shell` to connect to your riscv64 cuttlefish!
 
@@ -93,7 +90,8 @@ After about 10s you should be able to use `adb shell` to connect to your riscv64
 
 After building, run this following command from the same shell:
 ```
-$ launch_cvd -cpus=8 --memory_mb=8192 --gpu_mode=drm_virgl
+$ launch_cvd -cpus=8 --memory_mb=8192 --gpu_mode=drm_virgl \
+   --vm_manager=qemu_cli --qemu_binary_dir=$ANDROID_BUILD_TOP/device/google/cuttlefish_vmm/qemu/x86_64-linux-gnu/bin
 ```
 You can then use `vncviewer localhost:6444` to connect to your riscv64 cuttlefish!
 
