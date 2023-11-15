@@ -81,7 +81,7 @@ prebuilt qemu binaries in AOSP (as shown in the example commands below).
 
 After building, run this following command from the same shell:
 ```
-$ launch_cvd -cpus=4 --memory_mb=8192 \
+$ launch_cvd -cpus=4 --memory_mb=8192 --gpu_mode=none \
       --vm_manager=qemu_cli \
       --qemu_binary_dir=$ANDROID_BUILD_TOP/device/google/cuttlefish_vmm/qemu/x86_64-linux-gnu/bin
 ```
