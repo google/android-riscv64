@@ -77,25 +77,18 @@ instructions.
 Note that you need at least qemu 8.1, so you'll probably want to use the
 prebuilt qemu binaries in AOSP (as shown in the example commands below).
 
-### Getting to a shell (faster, but no graphics)
+### Getting to a shell
 
 After building, run this following command from the same shell:
 ```
 $ launch_cvd -cpus=4 --memory_mb=8192 --gpu_mode=none \
-      --vm_manager=qemu_cli \
-      --qemu_binary_dir=$ANDROID_BUILD_TOP/device/google/cuttlefish_vmm/qemu/x86_64-linux-gnu/bin
+      --qemu_binary_dir=$ANDROID_HOST_OUT/bin
 ```
 After about 10s you should be able to use `adb shell` to connect to your riscv64 cuttlefish!
 
-### Getting to the home screen (slower, but with graphics)
+### Getting to the home screen
 
-After building, run this following command from the same shell:
-```
-$ launch_cvd -cpus=8 --memory_mb=8192 --gpu_mode=drm_virgl \
-      --vm_manager=qemu_cli \
-      --qemu_binary_dir=$ANDROID_BUILD_TOP/device/google/cuttlefish_vmm/qemu/x86_64-linux-gnu/bin
-```
-You can then use `vncviewer localhost:6444` to connect to your riscv64 cuttlefish!
+You can use `vncviewer localhost:6444` to connect to your riscv64 cuttlefish!
 
 (Note that even on a fast Xeon workstation it takes several minutes to get to
 the boot animation and ten minutes to get to the home screen!)
