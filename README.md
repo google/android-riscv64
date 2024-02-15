@@ -81,9 +81,7 @@ prebuilt qemu binaries in AOSP (as shown in the example commands below).
 
 After building, run this following command from the same shell:
 ```
-$ launch_cvd -cpus=4 --memory_mb=8192 --gpu_mode=none \
-      --vm_manager=qemu_cli \
-      --qemu_binary_dir=$ANDROID_BUILD_TOP/device/google/cuttlefish_vmm/qemu/x86_64-linux-gnu/bin
+$ launch_cvd -cpus=4 --memory_mb=8192 --gpu_mode=none
 ```
 After about 10s you should be able to use `adb shell` to connect to your riscv64 cuttlefish!
 
@@ -91,9 +89,7 @@ After about 10s you should be able to use `adb shell` to connect to your riscv64
 
 After building, run this following command from the same shell:
 ```
-$ launch_cvd -cpus=8 --memory_mb=8192 --gpu_mode=drm_virgl \
-      --vm_manager=qemu_cli \
-      --qemu_binary_dir=$ANDROID_BUILD_TOP/device/google/cuttlefish_vmm/qemu/x86_64-linux-gnu/bin
+$ launch_cvd -cpus=8 --memory_mb=8192 --gpu_mode=drm_virgl
 ```
 You can then use `vncviewer localhost:6444` to connect to your riscv64 cuttlefish!
 
