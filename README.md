@@ -17,24 +17,30 @@ You might also want to subscribe to the
 [sig-android mailing list](https://lists.riscv.org/g/sig-android).
 (You need to send mail to
 [sig-android+subscribe@lists.riscv.org](mailto:sig-android+subscribe@lists.riscv.org)
-and then click "Join" on the mailing list web site.)
+and then click "Join" on the mailing list web site.) You can see the topics up for discussion --
+or add your own -- for the monthly meeting in the
+[Android SIG meeting topics](https://docs.google.com/document/d/1fwPYBpA85_gUP4meGKajS1chLhzNJ0dSkGKmmOzTQVE/edit)
+doc. But there's no need to wait for the meeting: you can ask questions on the mailing list at any time!
 
 ## Status
 
-We're currently (2023Q4) still working on
+We're currently (2024Q1) still working on
 [cuttlefish virtual devices](https://source.android.com/docs/setup/create/cuttlefish)
 and
 [ART](https://source.android.com/docs/core/runtime),
 although the
 [shell and command-line tools](https://android.googlesource.com/platform/system/core/+/main/shell_and_utilities/README.md)
 (and all the libraries they rely on) have been working great for a while.
-ART works, but is currently interpreter-only, so quite slow.
-cuttlefish works, but you'll need qemu 8 (see the cuttlefish setup section below for more details).
+ART works, and the JIT is now enabled by default.
 
 You can see the current status of the
 riscv64 build in CI in the `aosp_cf_riscv64_phone` column (between arm64 and x86-64) of
 [ci.android.com](https://ci.android.com/builds/branches/aosp-main/grid?), but we're not
-currently (2023Q4) running the _tests_ in CI.
+currently (2024Q1) running the _tests_ in CI.
+
+There's no Android NDK ABI for riscv64 yet, but we're working on it, and it will be added to the
+[Android ABIs](https://developer.android.com/ndk/guides/abis)
+page (and announced on the SIG mailing list) when it's done.
 
 ## Can I try it?
 
@@ -47,17 +53,18 @@ $ source build/envsetup.sh
 $ lunch aosp_cf_riscv64_phone-trunk_staging-userdebug
 
 ============================================
-PLATFORM_VERSION_CODENAME=UpsideDownCake
-PLATFORM_VERSION=UpsideDownCake
+PLATFORM_VERSION_CODENAME=VanillaIceCream
+PLATFORM_VERSION=VanillaIceCream
+PRODUCT_INCLUDE_TAGS=com.android.mainline mainline_module_prebuilt_nightly
 TARGET_PRODUCT=aosp_cf_riscv64_phone
 TARGET_BUILD_VARIANT=userdebug
 TARGET_ARCH=riscv64
 TARGET_ARCH_VARIANT=riscv64
 TARGET_CPU_VARIANT=generic
 HOST_OS=linux
-HOST_OS_EXTRA=Linux-5.19.11-1rodete1-amd64-x86_64-Debian-GNU/Linux-rodete
-HOST_CROSS_OS=windows
-BUILD_ID=AOSP.MASTER
+HOST_OS_EXTRA=Linux-6.5.13-1rodete2-amd64-x86_64-Debian-GNU/Linux-rodete
+HOST_CROSS_OS=linux_musl
+BUILD_ID=MAIN
 OUT_DIR=out
 ============================================
 $ make -j
