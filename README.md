@@ -96,7 +96,7 @@ After about 10s you should be able to use `adb shell` to connect to your riscv64
 
 After building, run this following command from the same shell:
 ```
-$ launch_cvd -cpus=8 --memory_mb=8192 --gpu_mode=drm_virgl
+$ launch_cvd -cpus=8 --memory_mb=8192
 ```
 You can then use `vncviewer localhost:6444` to connect to your riscv64 cuttlefish!
 
