@@ -24,19 +24,19 @@ doc. But there's no need to wait for the meeting: you can ask questions on the m
 
 ## Status
 
-We're currently (2024Q1) still working on
+We're currently (2024Q2) using
 [cuttlefish virtual devices](https://source.android.com/docs/setup/create/cuttlefish)
-and
-[ART](https://source.android.com/docs/core/runtime),
-although the
+to run
+[ART](https://source.android.com/docs/core/runtime)
+(with the JIT enabled) to boot to the homescreen,
+and the
 [shell and command-line tools](https://android.googlesource.com/platform/system/core/+/main/shell_and_utilities/README.md)
 (and all the libraries they rely on) have been working great for a while.
-ART works, and the JIT is now enabled by default.
 
 You can see the current status of the
 riscv64 build in CI in the `aosp_cf_riscv64_phone` column (between arm64 and x86-64) of
 [ci.android.com](https://ci.android.com/builds/branches/aosp-main/grid?), but we're not
-currently (2024Q1) running the _tests_ in CI.
+currently (2024Q2) running the _tests_ in CI.
 
 There's no Android NDK ABI for riscv64 yet, but we're working on it, and it will be added to the
 [Android ABIs](https://developer.android.com/ndk/guides/abis)
@@ -81,7 +81,8 @@ To launch cuttlefish, follow the general
 [AOSP cuttlefish setup](https://source.android.com/docs/setup/create/cuttlefish-use)
 instructions.
 
-Note that you need at least qemu 8.1, so you'll probably want to use the
+Note that you need at least qemu 8.1 (and qemu 9.0 has important fixes
+for the V extension), so you'll probably want to use the
 prebuilt qemu binaries in AOSP (as shown in the example commands below).
 
 ### Getting to a shell (faster, but no graphics)
