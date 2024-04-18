@@ -38,9 +38,16 @@ riscv64 build in CI in the `aosp_cf_riscv64_phone` column (between arm64 and x86
 [ci.android.com](https://ci.android.com/builds/branches/aosp-main/grid?), but we're not
 currently (2024Q2) running the _tests_ in CI.
 
-There's no Android NDK ABI for riscv64 yet, but we're working on it, and it will be added to the
+We have not defined the Android NDK ABI for riscv64 yet, but we're working on it, and it will be added to the
 [Android ABIs](https://developer.android.com/ndk/guides/abis)
 page (and announced on the SIG mailing list) when it's done.
+In the meantime, you can download [NDK r27 beta 1](https://developer.android.com/ndk/downloads)
+which has provisional support for riscv64.
+The ABI it targets is _less than_ what the final ABI will be,
+so although code compiled with it will not take full advantage of Android/riscv64 hardware,
+it should at least be _compatible_ with those devices.
+(Though obviously part of the point of giving early access to it is to try to find any serious mistakes we need to fix,
+and those fixes may involve ABI breaks!)
 
 ## Can I try it?
 
