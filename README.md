@@ -12,6 +12,7 @@ All Android/riscv64 work is being done directly in [AOSP](https://source.android
 Patches should be sent to AOSP using the usual
 [AOSP contribution process](https://source.android.com/docs/setup/contribute#contribute-to-the-code)
 and *not* as pull requests here.
+(This is true even after [Changes to AOSP](https://source.android.com/docs/whatsnew/site-updates#aosp-changes).)
 
 You might also want to subscribe to the
 [sig-android mailing list](https://lists.riscv.org/g/sig-android).
@@ -24,24 +25,19 @@ doc. But there's no need to wait for the meeting: you can ask questions on the m
 
 ## Status
 
-We're currently (2024Q2) using
+We're currently (2025Q2) using
 [cuttlefish virtual devices](https://source.android.com/docs/setup/create/cuttlefish)
 to run
 [ART](https://source.android.com/docs/core/runtime)
-(with the JIT enabled) to boot to the homescreen,
-and the
+to boot to the homescreen,
+and the usual
 [shell and command-line tools](https://android.googlesource.com/platform/system/core/+/main/shell_and_utilities/README.md)
-(and all the libraries they rely on) have been working great for a while.
-
-You can see the current status of the
-riscv64 build in CI in the `aosp_cf_riscv64_phone` column (between arm64 and x86-64) of
-[ci.android.com](https://ci.android.com/builds/branches/aosp-main/grid?), but we're not
-currently (2024Q2) running the _tests_ in CI.
+(and all the libraries they rely on) all work.
 
 We have not defined the Android NDK ABI for riscv64 yet, but we're working on it, and it will be added to the
 [Android ABIs](https://developer.android.com/ndk/guides/abis)
 page (and announced on the SIG mailing list) when it's done.
-In the meantime, you can download [NDK r27 beta 1](https://developer.android.com/ndk/downloads)
+In the meantime, you can download [the latest NDK](https://developer.android.com/ndk/downloads)
 which has provisional support for riscv64.
 The ABI it targets is _less than_ what the final ABI will be,
 so although code compiled with it will not take full advantage of Android/riscv64 hardware,
@@ -88,9 +84,9 @@ To launch cuttlefish, follow the general
 [AOSP cuttlefish setup](https://source.android.com/docs/setup/create/cuttlefish-use)
 instructions.
 
-Note that you need at least qemu 8.1 (and qemu 9.0 has important fixes
-for the V extension), so you'll probably want to use the
-prebuilt qemu binaries in AOSP (as shown in the example commands below).
+Note that you need at least qemu 8.1.
+qemu 9.0 has important fixes for the V extension,
+and qemu 9.2 has some good speedups for V too.
 
 ### Getting to a shell (faster, but no graphics)
 
@@ -122,6 +118,7 @@ Note that changes to projects under `external/` (other than to
 project in question first, and will then be merged into AOSP from
 there. In many cases, the `METADATA` file will point you to the
 upstream source, but feel free to ask here if not!
+You can also let us know whenever there's an important or useful update we should take!
 
 ## Review our Community Guidelines
 
